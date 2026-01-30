@@ -1,0 +1,27 @@
+[build-system]
+requires = ["uv_build>=0.9.25,<0.10.0"]
+build-backend = "uv_build"
+
+[project]
+name = "pytest-xfailer"
+version = "0.1.0"
+description = "Externally configured xdist marks"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pytest>=8.0",
+]
+
+classifiers = [
+    "Framework :: Pytest"
+]
+
+[project.entry-points.pytest11]
+pytest_xfailer = "pytest_xfailer"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 80
+
+format.quote-style = "preserve"
+format.skip-magic-trailing-comma = true
