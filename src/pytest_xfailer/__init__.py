@@ -12,7 +12,7 @@ def pytest_collection_modifyitems(
                 stripped
                 for line in cf
                 if (stripped := line.strip())
-                if not stripped.startswith('#')
+                if not stripped.startswith(('#', ';'))
             }
     except FileNotFoundError:
         return
